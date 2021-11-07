@@ -7,6 +7,7 @@
 .metadata
 bin/
 tmp/
+*.egg-info/
 *.tmp
 *.bak
 *.swp
@@ -61,6 +62,9 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+.idea/
+venv/
+./config.py
 
 # Installer logs
 pip-log.txt
@@ -69,18 +73,10 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
-.nox/
 .coverage
-.coverage.*
 .cache
 nosetests.xml
 coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
-
 
 # Translations
 *.mo
@@ -89,6 +85,10 @@ cover/
 .mr.developer.cfg
 .project
 .pydevproject
+
+# pycharm
+/venv/
+.idea
 
 # Rope
 .ropeproject
@@ -103,10 +103,6 @@ docs/_build/
 #machine specific files
 .vimrc
 
-# Pycharm
-.idea/
-/venv/
-config.py
 
 ############
 ## Windows
