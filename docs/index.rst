@@ -31,8 +31,8 @@ A PDF version of this document can be found `here <https://hed-python.readthedoc
 .. autosummary::
     :toctree: _autosummary
     :recursive:
-    hedmodules
-    webmodules
+    hed
+    hedweb
 
 Indices and tables
 ==================
