@@ -22,17 +22,29 @@ A PDF version of this document can be found `here <https://hed-python.readthedoc
     readme.md
     changelog
 
+    api.rst
+
 .. toctree::
    :maxdepth: 1
    :caption: Resources:
 
    Documentation.md
 
+.. toctree::
+    :maxdepth: 2
+    :caption: HED tools
+    :name: hedtools
+    :glob:
+
+
+
+
+
 .. autosummary::
     :toctree: _autosummary
     :recursive:
-    hed
-    hedweb
+    hedtools
+    webtools
 
 Indices and tables
 ==================
