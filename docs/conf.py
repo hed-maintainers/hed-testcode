@@ -12,8 +12,8 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../hedtools/hed/'))
-sys.path.insert(0, os.path.abspath('../wedtools/hedweb/'))
+sys.path.insert(0, os.path.abspath('../'))
+
 
 # -- Project information -----------------------------------------------------
 
@@ -34,6 +34,10 @@ extensions = [
     "myst_parser",
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
+    'sphinx.ext.autosectionlabel',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.coverage',
+    'sphinx.ext.mathjax',
     "sphinx.ext.viewcode",
     "sphinx.ext.githubpages",
     "sphinx.ext.napoleon"
@@ -42,7 +46,7 @@ extensions = [
 autosummary_generate = True
 myst_heading_anchors = 2
 myst_enable_extensions = ["deflist"]
-
+autodoc_default_flags = ['members', 'inherited-members']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -53,7 +57,7 @@ master_doc = 'index'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', '_templates']
+exclude_patterns = ['_build', '_templates', 'Thumbs.db', '.DS_Store']
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -80,9 +84,11 @@ html_theme_options = {
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-# html_static_path = ['_static']
+html_static_path = ['_static']
 # Add any Sphinx extension module names here, as strings
 
+# The name of the Pygments (syntax highlighting) style to use.
+pygments_style = 'sphinx'
 
 # Napoleon settings
 napoleon_google_docstring = True
